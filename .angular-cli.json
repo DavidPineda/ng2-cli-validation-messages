@@ -8,8 +8,8 @@
       "root": "lib",
       "outDir": "dist",
       "assets": [
-        "assets",
-        "favicon.ico"
+        "demo-app/assets",
+        "demo-app/favicon.ico"
       ],
       "index": "demo-app/index.html",
       "main": "demo-app/main.ts",

@@ -1,6 +1,14 @@
 {
   "name": "ng2-cli-validation-messages",
-  "version": "0.0.0",
+  "description": "@angular/cli model driven forms validation messages module.",
+  "keywords": [
+    "angular 2 validation",
+    "ng2 validation",
+    "ng2 validation messages",
+    "angular 2 validation messages",
+    "angular/cli validation messages"
+  ],
+  "version": "1.0.0",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
@@ -11,6 +19,12 @@
     "e2e": "ng e2e"
   },
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DavidPineda/ng2-cli-validation-messages"
+  },
+  "bugs": "https://github.com/DavidPineda/ng2-cli-validation-messages/issues",
+  "author": "David Pineda <davidpineda1003@gmail.com",
   "dependencies": {
     "@angular/common": "^4.0.0",
     "@angular/compiler": "^4.0.0",
@@ -20,6 +34,8 @@
     "@angular/platform-browser": "^4.0.0",
     "@angular/platform-browser-dynamic": "^4.0.0",
     "@angular/router": "^4.0.0",
+    "@ngx-translate/core": "^7.1.0",
+    "@ngx-translate/http-loader": "^0.1.0",
     "core-js": "^2.4.1",
     "rxjs": "^5.1.0",
     "zone.js": "^0.8.4"

@@ -4,7 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-
+import { AppTranslationModule } from './app.translation.module';
 import { Ng2MDFValidationMessagesModule } from '../../ng2-cli-vm';
 
 @NgModule({
@@ -16,7 +16,15 @@ import { Ng2MDFValidationMessagesModule } from '../../ng2-cli-vm';
     FormsModule,
     ReactiveFormsModule,
     HttpModule,
-    Ng2MDFValidationMessagesModule
+    AppTranslationModule,
+    Ng2MDFValidationMessagesModule.globalConfig({
+      class: 'has-error',
+      defaultErrorMessages: {
+        required: 'hello1',
+        email: 'Invalid email!',
+        minLength: 'Minimum length is {0}!',
+      }
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -6,7 +6,7 @@ import { MessageProvider } from './message-provider';
 
 @Component({
   selector: 'ng2-mdf-validation-message',
-  template: '<span *ngIf="errorMessage !== null" [class]="config.class">{{errorMessage}}</span>'
+  template: '<span *ngIf="errorMessage !== null" [class]="config.class">{{errorMessage | translate}}</span>'
 })
 export class ValidationMessageComponent implements OnInit {
   @Input() control: AbstractControl;
