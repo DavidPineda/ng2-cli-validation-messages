@@ -1,7 +1,7 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { ValidationMessageComponent } from './messages.component';
 import { ValidationMessagesConfiguration } from './config';
 
@@ -18,6 +18,9 @@ import { ValidationMessagesConfiguration } from './config';
   exports: [
     ValidationMessageComponent
   ],
+  providers: [
+    TranslateService
+  ]
 })
 export class Ng2MDFValidationMessagesModule {
   /**
