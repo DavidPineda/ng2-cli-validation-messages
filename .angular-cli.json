@@ -1,0 +1,57 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "project": {
+    "name": "ng2-cli-validation-messages"
+  },
+  "apps": [
+    {
+      "root": "lib",
+      "outDir": "dist",
+      "assets": [
+        "assets",
+        "favicon.ico"
+      ],
+      "index": "demo-app/index.html",
+      "main": "demo-app/main.ts",
+      "polyfills": "demo-app/polyfills.ts",
+      "test": "test.ts",
+      "tsconfig": "tsconfig.app.json",
+      "testTsconfig": "tsconfig.spec.json",
+      "prefix": "demo-app",
+      "styles": [
+        "demo-app/styles.scss"
+      ],
+      "scripts": [],
+      "environmentSource": "demo-app/environments/environment.ts",
+      "environments": {
+        "dev": "demo-app/environments/environment.ts",
+        "prod": "demo-app/environments/environment.prod.ts"
+      }
+    }
+  ],
+  "e2e": {
+    "protractor": {
+      "config": "./protractor.conf.js"
+    }
+  },
+  "lint": [
+    {
+      "project": "lib/tsconfig.app.json"
+    },
+    {
+      "project": "lib/tsconfig.spec.json"
+    },
+    {
+      "project": "e2e/tsconfig.e2e.json"
+    }
+  ],
+  "test": {
+    "karma": {
+      "config": "./karma.conf.js"
+    }
+  },
+  "defaults": {
+    "styleExt": "scss",
+    "component": {}
+  }
+}
