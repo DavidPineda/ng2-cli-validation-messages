@@ -5,8 +5,8 @@
   },
   "apps": [
     {
-      "root": "lib",
-      "outDir": "ng2-fvm",
+      "root": "ng2-fmv",
+      "outDir": "dist",
       "assets": [
         "demo-app/assets",
         "demo-app/favicon.ico"
