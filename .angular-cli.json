@@ -6,7 +6,7 @@
   "apps": [
     {
       "root": "lib",
-      "outDir": "dist",
+      "outDir": "ng2-fvm",
       "assets": [
         "demo-app/assets",
         "demo-app/favicon.ico"
