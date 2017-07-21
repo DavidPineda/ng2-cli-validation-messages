@@ -20,7 +20,7 @@ import { Ng2MDFValidationMessagesModule } from '../../ng2-cli-vm';
     Ng2MDFValidationMessagesModule.globalConfig({
       class: 'has-error',
       defaultErrorMessages: {
-        required: 'hello1',
+        required: 'hello',
         email: 'Invalid email!',
         minLength: 'Minimum length is {0}!',
       }
