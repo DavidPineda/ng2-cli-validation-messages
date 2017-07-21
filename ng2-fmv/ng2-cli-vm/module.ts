@@ -2,30 +2,14 @@ import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Http, HttpModule } from '@angular/http';
-import { TranslateModule, TranslateLoader } from "@ngx-translate/core";
-import { TranslateHttpLoader } from "@ngx-translate/http-loader";
 import { ValidationMessageComponent } from './messages.component';
 import { ValidationMessagesConfiguration } from './config';
-import { TranslateStore } from "@ngx-translate/core/src/translate.store";
-
-export function createTranslateLoader(http: Http) {
-  return new TranslateHttpLoader(http, './demo-app/assets/i18n/US/', '.json');
-}
-
-const translationOptions = {
-  loader: {
-    provide: TranslateLoader,
-    useFactory: (createTranslateLoader),
-    deps: [Http]
-  }
-};
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    TranslateModule.forChild(translationOptions)
   ],
   declarations: [
     ValidationMessageComponent
@@ -33,9 +17,6 @@ const translationOptions = {
   exports: [
     ValidationMessageComponent
   ],
-  providers: [
-    TranslateStore
-  ]
 })
 export class Ng2MDFValidationMessagesModule {
   /**
