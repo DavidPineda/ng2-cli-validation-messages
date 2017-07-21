@@ -7,6 +7,7 @@ import { TranslateHttpLoader } from "@ngx-translate/http-loader";
 import { ValidationMessageComponent } from './messages.component';
 import { ValidationMessagesConfiguration } from './config';
 import { TranslateStore } from "@ngx-translate/core/src/translate.store";
+
 export function createTranslateLoader(http: Http) {
   return new TranslateHttpLoader(http, './demo-app/assets/i18n/US/', '.json');
 }
