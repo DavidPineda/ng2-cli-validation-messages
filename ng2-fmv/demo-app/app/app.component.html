@@ -3,4 +3,9 @@
   <label>First Name</label>
   <input [formControl]="firstName" type="text">
   <ng2-mdf-validation-message [control]="firstName" *ngIf="!firstName.pristine"></ng2-mdf-validation-message>
+  <label translate>Seleccione<span> *</span></label>
+  <select class="form-control" [formControl]="genderId">
+    <option *ngFor="let genderId of genders" [value]="genderId.id" translate>{{genderId.text}}</option>
+  </select>
+  <ng2-mdf-validation-message [control]="genderId" *ngIf="!genderId.valid"></ng2-mdf-validation-message>
 </form>

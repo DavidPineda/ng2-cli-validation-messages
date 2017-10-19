@@ -25,6 +25,7 @@ export class MessageProvider {
       case 'date':
       case 'areEqual':
       case 'passwords':
+      case 'selectValue':
         return errorMessageActual;
 
       case 'minlength':

@@ -357,6 +357,23 @@ export class ValidationExtensions {
     };
   }
 
+  /**
+   * Requires a selection value greater than -1
+   * @param message Custom error message that will be shown to the user.
+   */
+  static selectValue(message: string = null): ValidatorFn {
+    return (control: AbstractControl): { [key: string]: any } => {
+
+      if (control.value > -1) return null;
+
+      return {
+        selectValue: {
+          message: message,
+        }
+      };
+    };
+  }
+
   private static _areGroupInputValuesEqual(group: FormGroup): boolean {
     let keys: string[] = Object.keys(group.controls);
     let keysLength = keys.length;

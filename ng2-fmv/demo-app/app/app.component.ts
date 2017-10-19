@@ -12,6 +12,8 @@ export class AppComponent implements OnInit {
   title = 'demo-app works!';
   editorForm: FormGroup;
   firstName: FormControl;
+  genderId: FormControl;
+  public genders: Array<any> = [];
 
   constructor(private formBuilder: FormBuilder) {}
 
@@ -20,8 +22,16 @@ export class AppComponent implements OnInit {
       ValidationExtensions.required(),
       ValidationExtensions.minLength(3)
     ]);
+    this.genderId = this.formBuilder.control('', ValidationExtensions.selectValue());
     this.editorForm = this.formBuilder.group({
       firstName: this.firstName,
     });
+    let select = { id: -1, text: 'seleccione' };
+    let female = { id: 1, text: 'forms.labels.female' };
+    let male = { id: 2, text: 'forms.labels.male' };
+    this.genders.push(select);
+    this.genders.push(female);
+    this.genders.push(male);
+    this.genderId.setValue(-1);
   }
 }

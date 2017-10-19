@@ -21,6 +21,7 @@ export class DefaultErrorMessages {
   date: string;
   areEqual: string;
   passwords: string;
+  selectValue: string;
   [key: string]: string;
 }
 
@@ -44,5 +45,6 @@ export const defaultConfig: ValidationMessagesConfiguration = {
     areEqual: 'The values in the group must match!',
     passwords: 'Both fields "Password" and "Confirm Password" must match!',
     unknownError: 'Unknown Error!',
+    selectValue: 'You must select a value from the list'
   },
 };
